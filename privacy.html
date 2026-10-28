@@ -70,7 +70,7 @@
 <p>Every event carries the time it happened. So if sharing is on, we can tell when the app was used, for example that a day was painted at a certain moment. We can never tell which colour, or which earlier day was painted.</p>
 
 <h3>Your IP address</h3>
-<p>The app does not include your IP address in the data. Like any server, Amplitude can see the network address a request comes from. We set Amplitude not to store IP addresses or locations derived from them.</p>
+<p>The app does not include your IP address in the data. Like any server, Amplitude can see the network address a request comes from. Because the app never sends an IP address with the data, Amplitude doesn't record it with your events or work out your location from it. We checked this in our own Amplitude project: the location fields stay empty.</p>
 
 <p>Because sharing is off by default and only turned on by you, the legal basis for this processing under the GDPR is your consent. You can withdraw it at any time by turning sharing off.</p>
 

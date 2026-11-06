@@ -28,6 +28,23 @@
     const lang = document.querySelector(".lang-pick"); if (lang) lang.value = lang.querySelector("[selected]").value;
   });
 
+  // The store link goes live on release day; until then a click shows the date instead. Expires on its own.
+  if (Date.now() < new Date(2026, 10, 27)) {
+    const tip = document.createElement("span");
+    tip.className = "soon"; tip.setAttribute("role", "status");
+    document.body.append(tip);
+    let timer;
+    const hide = () => tip.classList.remove("on");
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => a.addEventListener("click", e => {
+      e.preventDefault();
+      const r = a.getBoundingClientRect();
+      tip.textContent = root.lang === "ko" ? "11월 27일 출시 예정이에요" : "Coming Nov 27";
+      tip.style.left = `${r.left + r.width / 2}px`; tip.style.top = `${r.top}px`;
+      tip.classList.add("on"); clearTimeout(timer); timer = setTimeout(hide, 2400);
+    }));
+    addEventListener("scroll", hide, { passive: true });
+  }
+
   // The app's tiny LCG, so every visit paints the same sample year.
   let seed = 20261126;
   const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;

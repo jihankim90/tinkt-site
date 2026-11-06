@@ -210,3 +210,7 @@ footer { margin-top: 3em; font-size: 0.9rem; color: var(--soft); }
 .duo-try .spine { position: absolute; left: 0; top: 4%; bottom: 4%; width: calc(var(--bz) * 1.2); border-radius: 2px;
   background: linear-gradient(90deg, var(--bezel), color-mix(in srgb, var(--bezel), #fff 18%), var(--bezel)); }
 .duo-try .shade { position: absolute; inset: 0; border-radius: inherit; background: #000; opacity: 0; pointer-events: none; }
+/* "Coming Nov 27" bubble above a store link, until release day (paint.js). */
+.soon { position: fixed; z-index: 20; transform: translate(-50%, calc(-100% - 10px)) scale(.96); transform-origin: 50% 100%; padding: 8px 14px; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: .88rem; font-weight: 600; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .2s var(--ease), transform .2s var(--ease); }
+.soon.on { opacity: 1; transform: translate(-50%, calc(-100% - 10px)); }
+@media (prefers-reduced-motion: reduce) { .soon { transition: opacity .2s; transform: translate(-50%, calc(-100% - 10px)); } }

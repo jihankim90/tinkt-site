@@ -210,5 +210,5 @@ footer { margin-top: 3em; font-size: 0.9rem; color: var(--soft); }
 .duo-try .spine { position: absolute; left: 0; top: 4%; bottom: 4%; width: calc(var(--bz) * 1.2); border-radius: 2px;
   background: linear-gradient(90deg, var(--bezel), color-mix(in srgb, var(--bezel), #fff 18%), var(--bezel)); }
 .duo-try .shade { position: absolute; inset: 0; border-radius: inherit; background: #000; opacity: 0; pointer-events: none; }
-/* "Pre-order now · Out Nov 27" under the store buttons; paint.js removes it from release day. */
+/* "Pre-order now · Out Nov 26" under the store buttons; paint.js removes it from release day. */
 .preorder { margin-top: 12px; font-size: 0.92rem; font-weight: 600; }

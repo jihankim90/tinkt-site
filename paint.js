@@ -29,7 +29,7 @@
   });
 
   // Pre-order line under the store buttons; gone from release day on.
-  if (Date.now() >= new Date(2026, 10, 27)) document.querySelectorAll(".preorder").forEach(p => p.remove());
+  if (Date.now() >= new Date(2026, 10, 26)) document.querySelectorAll(".preorder").forEach(p => p.remove());
 
   // The app's tiny LCG, so every visit paints the same sample year.
   let seed = 20261126;

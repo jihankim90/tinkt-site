@@ -28,9 +28,6 @@
     const lang = document.querySelector(".lang-pick"); if (lang) lang.value = lang.querySelector("[selected]").value;
   });
 
-  // Pre-order line under the store buttons; gone from release day on.
-  if (Date.now() >= new Date(2026, 10, 26)) document.querySelectorAll(".preorder").forEach(p => p.remove());
-
   // The app's tiny LCG, so every visit paints the same sample year.
   let seed = 20261126;
   const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
